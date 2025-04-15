@@ -15,7 +15,7 @@ const Index: React.FC = () => {
   const [categories, setCategories] = useState<string[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [currentPage, setCurrentPage] = useState(1);
-  const [selectedCategory, setSelectedCategory] = useState("");
+  const [selectedCategory, setSelectedCategory] = useState("all");
   const [sortOption, setSortOption] = useState<SortOption>("price-asc");
   const [priceRange, setPriceRange] = useState<[number, number]>([0, 1000]);
   const [maxPrice, setMaxPrice] = useState(1000);
@@ -54,7 +54,7 @@ const Index: React.FC = () => {
   const filteredProducts = useMemo(() => {
     return products
       .filter((product) => {
-        const matchesCategory = !selectedCategory || product.category === selectedCategory;
+        const matchesCategory = selectedCategory === "all" || product.category === selectedCategory;
         const matchesPriceRange = product.price >= priceRange[0] && product.price <= priceRange[1];
         return matchesCategory && matchesPriceRange;
       })
@@ -87,7 +87,7 @@ const Index: React.FC = () => {
   }, [selectedCategory, sortOption, priceRange]);
 
   const handleResetFilters = () => {
-    setSelectedCategory("");
+    setSelectedCategory("all");
     setSortOption("price-asc");
     setPriceRange([0, maxPrice]);
     setCurrentPage(1);
