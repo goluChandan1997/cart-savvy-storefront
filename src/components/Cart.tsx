@@ -1,3 +1,4 @@
+
 import React from "react";
 import { useCart } from "@/context/CartContext";
 import { Button } from "@/components/ui/button";
@@ -73,7 +74,7 @@ const Cart: React.FC = () => {
               <ScrollArea className="flex-grow">
                 <div className="p-4 space-y-4">
                   {cartItems.map((item) => (
-                    <div key={item.id} className="flex gap-4">
+                    <div key={item.id} className="flex gap-4 border-b pb-4">
                       <div className="h-20 w-20 overflow-hidden rounded-md bg-secondary">
                         <img
                           src={item.image}
@@ -83,7 +84,11 @@ const Cart: React.FC = () => {
                       </div>
                       <div className="flex-1 space-y-1">
                         <h4 className="font-medium text-sm line-clamp-2">{item.title}</h4>
-                        <p className="text-sm font-semibold">${(item.price * item.quantity).toFixed(2)}</p>
+                        <div className="flex flex-col mt-1">
+                          <span className="text-xs text-muted-foreground">Price: ${item.price.toFixed(2)}</span>
+                          <span className="text-xs text-muted-foreground">Qty: {item.quantity}</span>
+                          <p className="text-sm font-semibold mt-1">Total: ${(item.price * item.quantity).toFixed(2)}</p>
+                        </div>
                         <div className="flex items-center gap-2 mt-2">
                           <Button
                             variant="outline"
