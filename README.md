@@ -6,7 +6,7 @@
 
 ## Project info
 
-**URL**: https://profound-travesseiro-2c823a.netlify.app/
+**URL**: https://zippy-paletas-352cd7.netlify.app/
 
 ## How can I edit this code?
 
