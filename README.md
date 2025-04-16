@@ -1,25 +1,22 @@
-# Welcome to your Lovable project
+# Welcome to your cart-savvy-storefront project
+
+![Dasboard](./public/images/Screenshot-1.png)
+
+![Code Architecture](./public/images/Screenshot-2.png)
 
 ## Project info
 
-**URL**: https://lovable.dev/projects/5e471322-184a-4648-98a5-c3241be9cc02
+**URL**: https://profound-travesseiro-2c823a.netlify.app/
 
 ## How can I edit this code?
 
 There are several ways of editing your application.
 
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/5e471322-184a-4648-98a5-c3241be9cc02) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
 **Use your preferred IDE**
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+If you want to work locally using your own IDE, you can clone this repo and push changes.
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
+The only requirement is having Node.js & npm installed
 Follow these steps:
 
 ```sh
@@ -59,15 +56,3 @@ This project is built with:
 - React
 - shadcn-ui
 - Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/5e471322-184a-4648-98a5-c3241be9cc02) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
